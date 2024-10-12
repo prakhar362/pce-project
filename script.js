@@ -4,7 +4,7 @@ let videoElement = document.getElementById('hero-video');
 
 window.addEventListener('scroll', () => {
     // Check if the user has scrolled down
-    if (window.scrollY > 5) {
+    if (window.scrollY > 15) {
         videoElement.pause(); // Stop the video
     } else {
         videoElement.play(); // Resume video if scrolled back to the top
