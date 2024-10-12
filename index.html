@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerGen | Decentralized Power Generation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo" style="font-size: larger;">PowerGen</div>
+        <ul class="nav-links">
+            <li><a href="#country-resources">Country Resources</a></li>
+            <li><a href="#technologies">Technologies</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video autoplay loop unmuted class="hero-video" id="hero-video">
+            <source src="./video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay">
+            <h1>Decentralized Micro Power Generation</h1>
+            <p>Harnessing sustainable energy solutions for a brighter future.</p>
+            <a href="#technologies" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Country Resources Section -->
+    <section id="country-resources" class="section">
+        <div class="country-input">
+            <h2>Select a Country to View Resources</h2>
+            <form id="country-form">
+                <select id="country-select">
+                    <option value="India">India</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Germany">Germany</option>
+                    <option value="USA">USA</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="China">China</option>
+                    <option value="SouthAfrica">SouthAfrica</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Japan">Japan</option>
+                </select>
+                <button type="submit">View Resources</button>
+            </form>
+            <div id="country-results"></div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="section">
+        <div class="tech-section">
+            <h2>Our Renewable Technologies</h2>
+            <div class="tech-cards">
+                <div class="tech-card">
+                    <img src="solar.png" alt="Solar Power">
+                    <h3>Solar Power</h3>
+                    <p>Efficient solar panels powering off-grid communities.</p>
+                </div>
+                <div class="tech-card">
+                    <img src="wind.png" alt="Wind Power">
+                    <h3>Wind Power</h3>
+                    <p>Harnessing wind energy to provide reliable power.</p>
+                </div>
+                <div class="tech-card">
+                    <img src="hydropower.png" alt="Hydropower">
+                    <h3>Hydropower</h3>
+                    <p>Utilizing water resources for sustainable energy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="section">
+        <div class="case-studies-section">
+            <h2>Decentralized Power Generation Case Studies</h2>
+            <div class="case-study">
+                <h3>India: Solar Microgrids in Rural Villages</h3>
+                <p>Solar microgrids are providing electricity to rural villages in India, drastically improving quality of life and boosting local economies.</p>
+            </div>
+            <div class="case-study">
+                <h3>Germany: Wind Power for Urban Sustainability</h3>
+                <p>Germany has successfully integrated wind power into urban areas, significantly reducing reliance on coal and fossil fuels.</p>
+            </div>
+            <div class="case-study">
+                <h3>Kenya: Hydropower in Rural Communities</h3>
+                <p>Hydropower initiatives in Kenya are enhancing energy access in rural areas, promoting local business and education.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="contact-form">
+            <h2>Get in Touch</h2>
+            <form action="#" method="post">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
