@@ -76,6 +76,303 @@
                 </div>
             </div>
         </div>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .system-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .system {
+            text-align: center;
+            width: 200px;
+        }
+
+        .system img {
+            width: 100px;
+            height: 100px;
+            opacity: 0.2;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .active img {
+            opacity: 1;
+        }
+
+        .flow-line {
+            width: 150px;
+            height: 5px;
+            background-color: #bbb;
+            margin-top: 50px;
+            position: relative;
+            opacity: 0.3;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .flow-line.active {
+            opacity: 1;
+        }
+
+        .flow-arrow {
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 10px solid #666;
+            position: absolute;
+            top: -3px;
+            left: 100%;
+        }
+
+        .control-panel {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .control-panel button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .control-panel button:hover {
+            background-color: #0056b3;
+        }
+
+        .log {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+
+        .log h2 {
+            margin-top: 0;
+        }
+
+        .log p {
+            margin: 5px 0;
+        }
+    </style>
+    <br> <br> <br>
+    <h1>Detailed Power Generation Simulation</h1>
+
+    <div class="system-container">
+        <!-- Solar Panel -->
+        <div class="system" id="solar">
+            <h3>Solar Panel</h3>
+            <video src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/solar-panal-animated-icon-download-in-lottie-json-gif-static-svg-file-formats--nature-environment-ecology-energy-sustainable-pack-icons-7408701.mp4" autoplay="autoplay" muted="muted" loop="loop" playsinline="" type="video/mp4" alter="Solar Panel"></video>
+        </div>
+
+        <!-- Line between systems -->
+        <div class="flow-line" id="solar-to-inverter">
+            <div class="flow-arrow"></div>
+        </div>
+
+        <!-- Wind Turbine -->
+        <div class="system" id="wind">
+            <h3>Wind Turbine</h3>
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnM3aWRkZjY1bzlvZTVpYXpqazBkdjVsazFxc3duc2FxMW9qeG10eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11yLRIlRREv6lG/giphy.webp" alt="Wind Turbine">
+        </div>
+
+        <!-- Line between systems -->
+        <div class="flow-line" id="wind-to-inverter">
+            <div class="flow-arrow"></div>
+        </div>
+
+        <!-- Water-Based System -->
+        <div class="system" id="water">
+            <h3>Hydroelectric Plant</h3>
+            <video src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/hydro-power-animated-icon-download-in-lottie-json-gif-static-svg-file-formats--energy-water-ecology-sustainable-pack-nature-icons-7408707.mp4" autoplay="autoplay" muted="muted" loop="loop" ></video>
+        </div>
+
+        <!-- Line between systems -->
+        <div class="flow-line" id="water-to-inverter">
+            <div class="flow-arrow"></div>
+        </div>
+
+        <!-- Solar Power Station -->
+        <div class="system" id="solar-station">
+            <h3>Solar Power Station</h3>
+            <video src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/battery-animation-download-in-lottie-json-gif-static-svg-file-formats--batteries-charge-energy-eco-pack-nature-animations-4047938.mp4" autoplay="autoplay" muted="muted" loop="loop" playsinline="" type="video/mp4" style=""></video>
+        </div>
+        <!-- Line between systems -->
+        <div class="flow-line" id="water-to-inverter">
+            <div class="flow-arrow"></div>
+        </div>
+        
+        <!-- Wind Power Station -->
+        <div class="system" id="wind-station">
+            <h3>Wind Power Station</h3>
+            <img src="https://europe.arcelormittal.com/repo/Europe/WindCityWithButtons-800px.gif" alt="Wind Station">
+        </div>
+        <!-- Line between systems -->
+        <div class="flow-line" id="water-to-inverter">
+            <div class="flow-arrow"></div>
+        </div>
+
+        <!-- Hydroelectric Power Station -->
+        <div class="system" id="hydro-station">
+            <h3>Hydroelectric Station</h3>
+            <video src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/electrical-energy-tower-animation-download-in-lottie-json-gif-static-svg-file-formats--electricity-power-eco-pack-nature-animations-4047943.mp4" autoplay="autoplay" muted="muted" loop="loop" playsinline="" type="video/mp4" style=""></video>
+        </div>
+        <!-- Line between systems -->
+        <div class="flow-line" id="water-to-inverter">
+            <div class="flow-arrow"></div>
+        </div>
+
+        <!-- Battery Storage -->
+        <div class="system" id="battery">
+            <h3>Battery Storage</h3>
+            <video src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/batteries-animation-download-in-lottie-json-gif-static-svg-file-formats--battery-cell-galvanic-electricity-eco-energy-pack-nature-animations-4047937.mp4" autoplay="autoplay" muted="muted" loop="loop" playsinline="" type="video/mp4" style=""></video>
+        </div>
+        <!-- Line between systems -->
+        <div class="flow-line" id="water-to-inverter">
+            <div class="flow-arrow"></div>
+        </div>
+
+        <!-- Power Grid -->
+        <div class="system" id="grid">
+            <h3>Power Grid</h3>
+            <img src="https://media.licdn.com/dms/image/D4E12AQHqiFUydrKkcg/article-cover_image-shrink_720_1280/0/1685474759405?e=2147483647&v=beta&t=4seIAjh2-pt5tzBX9TLVB7_wzEYs6iv9C2A3K3cozSQ" alt="">
+        </div>
+    </div>
+
+    <!-- Control Panel -->
+    <div class="control-panel">
+        <button onclick="startProcess()">Start Power Generation</button>
+        <button onclick="resetProcess()">Reset</button>
+    </div>
+
+    <!-- Log -->
+    <div class="log" id="log">
+        <h2>Process Log</h2>
+        <p id="log-message">No actions performed yet.</p>
+    </div>
+
+    <script>
+        let currentStep = 0;
+
+        function logAction(message) {
+            document.getElementById('log-message').innerHTML = message;
+        }
+
+        function startProcess() {
+            if (currentStep === 0) {
+                activateSolarPanel();
+            } else if (currentStep === 1) {
+                processSolarPower();
+            } else if (currentStep === 2) {
+                activateWindTurbine();
+            } else if (currentStep === 3) {
+                processWindPower();
+            } else if (currentStep === 4) {
+                activateHydroSystem();
+            } else if (currentStep === 5) {
+                processHydroPower();
+            } else if (currentStep === 6) {
+                activateBatteryStorage();
+            } else if (currentStep === 7) {
+                connectToGrid();
+            } else {
+                logAction("Process complete. The energy is now supplied to the grid!");
+            }
+        }
+
+        // Solar Panel Activation
+        function activateSolarPanel() {
+            logAction("Solar panel activated. Harnessing sunlight...");
+            document.getElementById('solar').classList.add('active');
+            document.getElementById('solar-to-inverter').classList.add('active');
+            currentStep++;
+            setTimeout(startProcess, 2000);
+        }
+
+        // Solar Power Processing
+        function processSolarPower() {
+            logAction("Solar energy processed in Solar Station...");
+            document.getElementById('solar-station').classList.add('active');
+            currentStep++;
+            setTimeout(startProcess, 2000);
+        }
+
+        // Wind Turbine Activation
+        function activateWindTurbine() {
+            logAction("Wind turbine activated. Harnessing wind energy...");
+            document.getElementById('wind').classList.add('active');
+            document.getElementById('wind-to-inverter').classList.add('active');
+            currentStep++;
+            setTimeout(startProcess, 2000);
+        }
+
+        // Wind Power Processing
+        function processWindPower() {
+            logAction("Wind energy processed in Wind Power Station...");
+            document.getElementById('wind-station').classList.add('active');
+            currentStep++;
+            setTimeout(startProcess, 2000);
+        }
+
+        // Hydroelectric System Activation
+        function activateHydroSystem() {
+            logAction("Hydroelectric system activated. Harnessing water energy...");
+            document.getElementById('water').classList.add('active');
+            document.getElementById('water-to-inverter').classList.add('active');
+            currentStep++;
+            setTimeout(startProcess, 2000);
+        }
+
+        // Hydroelectric Power Processing
+        function processHydroPower() {
+            logAction("Water energy processed in Hydroelectric Station...");
+            document.getElementById('hydro-station').classList.add('active');
+            currentStep++;
+            setTimeout(startProcess, 2000);
+        }
+
+        // Battery Storage Activation
+        function activateBatteryStorage() {
+            logAction("Energy stored in battery storage...");
+            document.getElementById('battery').classList.add('active');
+            currentStep++;
+            setTimeout(startProcess, 2000);
+        }
+
+        // Power Grid Connection
+        function connectToGrid() {
+            logAction("Energy now supplied to the power grid!");
+            document.getElementById('grid').classList.add('active');
+            currentStep++;
+        }
+
+        function resetProcess() {
+            logAction("Process reset. Ready to start.");
+            document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
+            currentStep = 0;
+        }
+    </script>
+
+</body>
+</html>
+
     </section>
 
     <!-- Case Studies Section -->

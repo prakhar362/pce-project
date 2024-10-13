@@ -98,6 +98,10 @@ body {
 .section {
     padding: 2rem;
 }
+.system video{
+    max-width: 120px;
+    max-height: 120px;
+}
 
 /* Country Resources Section */
 .country-input {
