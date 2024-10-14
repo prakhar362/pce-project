@@ -32,50 +32,72 @@
     </section>
 
     <!-- Country Resources Section -->
-    <section id="country-resources" class="section">
-        <div class="country-input">
-            <h2>Select a Country to View Resources</h2>
-            <form id="country-form">
-                <select id="country-select">
-                    <option value="India">India</option>
-                    <option value="Kenya">Kenya</option>
-                    <option value="Germany">Germany</option>
-                    <option value="USA">USA</option>
-                    <option value="Brazil">Brazil</option>
-                    <option value="China">China</option>
-                    <option value="SouthAfrica">SouthAfrica</option>
-                    <option value="Australia">Australia</option>
-                    <option value="Canada">Canada</option>
-                    <option value="Japan">Japan</option>
-                </select>
-                <button type="submit">View Resources</button>
-            </form>
-            <div id="country-results"></div>
-        </div>
-    </section>
+<section id="country-resources" class="section">
+    <div class="country-input">
+        <h2>Select a Country to View Resources</h2>
+        <form id="country-form">
+            <select id="country-select" aria-label="Select a country">
+                <option value="" disabled selected>Select a country</option>
+                <option value="India">India</option>
+                <option value="Kenya">Kenya</option>
+                <option value="Germany">Germany</option>
+                <option value="USA">USA</option>
+                <option value="Brazil">Brazil</option>
+                <option value="China">China</option>
+                <option value="SouthAfrica">South Africa</option>
+                <option value="Australia">Australia</option>
+                <option value="Canada">Canada</option>
+                <option value="Japan">Japan</option>
+            </select>
+            <button type="submit">View Resources</button>
+        </form>
+        <div id="country-results"></div>
+    </div>
+</section>
+
 
     <!-- Technologies Section -->
-    <section id="technologies" class="section">
-        <div class="tech-section">
-            <h2>Our Renewable Technologies</h2>
-            <div class="tech-cards">
-                <div class="tech-card">
-                    <img src="solar.png" alt="Solar Power">
-                    <h3>Solar Power</h3>
-                    <p>Efficient solar panels powering off-grid communities.</p>
+<section id="technologies" class="section">
+    <div class="tech-section">
+        <h2>Our Renewable Technologies</h2>
+        <div class="tech-cards">
+            <div class="tech-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcE-pt7TAokjK9Tbkgts0P9FEo03zQcxEZ2Q&s" alt="Solar Power">
+                <h3>Solar Power</h3>
+                <div class="hover-content">
+                    <p><strong>Energy Production:</strong> Solar panels convert sunlight into electricity through photovoltaic cells, providing clean energy for homes and businesses.</p>
+                    <p><strong>Economic Benefits:</strong> Reduces energy bills significantly, creates jobs in manufacturing and installation, and boosts local economies through green technology investments.</p>
+                    <p><strong>Environmental Impact:</strong> Minimizes reliance on fossil fuels, drastically lowers greenhouse gas emissions, and reduces water usage compared to conventional energy sources.</p>
+                    <p><strong>Philanthropic Initiatives:</strong> Solar projects empower off-grid communities by providing reliable energy, enhancing education and healthcare facilities through improved lighting and power supply.</p>
+                    <p><strong>Future Potential:</strong> With advancements in solar technology, we expect increased efficiency and lower costs, making solar power accessible to more regions globally.</p>
                 </div>
-                <div class="tech-card">
-                    <img src="wind.png" alt="Wind Power">
-                    <h3>Wind Power</h3>
-                    <p>Harnessing wind energy to provide reliable power.</p>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.pixabay.com/animation/2023/03/17/02/19/02-19-19-487_512.gif" alt="Wind Power">
+                <h3>Wind Power</h3>
+                <div class="hover-content">
+                    <p><strong>Energy Production:</strong> Wind turbines harness wind energy to generate electricity, converting kinetic energy into usable power efficiently.</p>
+                    <p><strong>Economic Benefits:</strong> Provides stable job opportunities in manufacturing, installation, and maintenance of wind turbines, contributing to local economic growth.</p>
+                    <p><strong>Environmental Impact:</strong> Wind energy is one of the cleanest sources of electricity, producing no emissions during operation and preserving water resources.</p>
+                    <p><strong>Philanthropic Initiatives:</strong> Wind farms can support local infrastructure projects, such as road improvements and community development funds, benefiting residents.</p>
+                    <p><strong>Future Potential:</strong> Innovations in turbine design and energy storage systems will increase efficiency and expand the viability of wind energy in diverse environments.</p>
                 </div>
-                <div class="tech-card">
-                    <img src="hydropower.png" alt="Hydropower">
-                    <h3>Hydropower</h3>
-                    <p>Utilizing water resources for sustainable energy.</p>
+            </div>
+            <div class="tech-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTte8yv4ruB_Sw99c-Ttlps3Pl1bOQAM0H-wg&s" alt="Hydropower">
+                <h3>Hydropower</h3>
+                <div class="hover-content">
+                    <p><strong>Energy Production:</strong> Hydropower generates electricity by using the flow of water to turn turbines, making it one of the oldest and most reliable energy sources.</p>
+                    <p><strong>Economic Benefits:</strong> Provides low-cost electricity, creates jobs in construction and maintenance, and promotes economic development through affordable energy access.</p>
+                    <p><strong>Environmental Impact:</strong> Reduces carbon emissions and contributes to sustainable water resource management, although careful planning is needed to minimize ecosystem disruption.</p>
+                    <p><strong>Philanthropic Initiatives:</strong> Hydropower projects can enhance irrigation systems, providing water for agriculture and improving food security in local communities.</p>
+                    <p><strong>Future Potential:</strong> Small-scale and run-of-river hydropower projects are gaining traction, offering sustainable energy solutions with minimal environmental impact.</p>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -86,7 +108,7 @@
 
         h1 {
             text-align: center;
-            color: #333;
+            color: #fff
         }
 
         .system-container {
@@ -173,7 +195,7 @@
         }
     </style>
     <br> <br> <br>
-    <h1>Detailed Power Generation Simulation</h1>
+    <h1 style="color: black;">Detailed Power Generation Simulation</h1>
 
     <div class="system-container">
         <!-- Solar Panel -->
@@ -370,29 +392,78 @@
         }
     </script>
 
-</body>
-</html>
-
-    </section>
-
-    <!-- Case Studies Section -->
-    <section id="case-studies" class="section">
-        <div class="case-studies-section">
-            <h2>Decentralized Power Generation Case Studies</h2>
-            <div class="case-study">
-                <h3>India: Solar Microgrids in Rural Villages</h3>
-                <p>Solar microgrids are providing electricity to rural villages in India, drastically improving quality of life and boosting local economies.</p>
-            </div>
-            <div class="case-study">
-                <h3>Germany: Wind Power for Urban Sustainability</h3>
-                <p>Germany has successfully integrated wind power into urban areas, significantly reducing reliance on coal and fossil fuels.</p>
-            </div>
-            <div class="case-study">
-                <h3>Kenya: Hydropower in Rural Communities</h3>
-                <p>Hydropower initiatives in Kenya are enhancing energy access in rural areas, promoting local business and education.</p>
-            </div>
+<!-- Case Studies Section -->
+<section id="case-studies" class="section">
+    <div class="case-studies-section">
+        <h2>Decentralized Power Generation Case Studies and Our Experience</h2>
+        <div class="case-study">
+            <h3>Cuba Windmills and Solar Panel PVs</h3>
+            <p>
+                Cuba is an island nation situated in the Caribbean Sea, near the Gulf of Mexico and the Atlantic Ocean. The most densely populated areas in the country are the cities of Havana and Guantanamo. 
+                Due to oil shortages, power outages have become a serious problem in some municipalities in Cuba. Currently, 84% of Cuban electricity is mainly generated by oil, with the main oil exporters for Cuba being Russia and Venezuela.
+            </p>
+            <p>
+                In this case study, we will focus primarily on analyzing the feasibility of integrating renewable energy sources into the country's electricity grid to improve resilience and reduce fossil import dependency.
+            </p>
+            <p>
+                Cuba's renewable energy sector has significant untapped potential, especially in biomass, solar photovoltaic (PV), and wind energy resources. The abundance of biomass resources in the country, such as marabu, sugarcane leftovers, and agricultural waste, presents great potential for bioenergy generation. Furthermore, Cuba's geographical location and temperature make it ideal for harvesting solar energy via PV systems. Wind energy is also a feasible renewable option due to the island's coastal regions and favorable wind patterns.
+            </p>
         </div>
-    </section>
+        <div class="case-study">
+            <h3>India for Urban Sustainability</h3>
+            <p>
+                <strong>Project:</strong> Husk Power Systems (HPS) <br>
+                <strong>Location:</strong> Bihar, India <br>
+                <strong>Technology:</strong> Biomass gasification microgrids <br>
+                <strong>Objective:</strong> To generate clean, reliable electricity for rural communities using agricultural waste.
+            </p>
+            <p>
+                Husk Power Systems is an Indian company that pioneered the use of rice husks to generate electricity through biomass gasification. The company sets up decentralized microgrids to provide electricity to villages in Bihar, where grid power is unreliable or unavailable. These microgrids power homes, businesses, and community facilities.
+            </p>
+            <p>
+                <strong>Impact:</strong><br>
+                - Electrification: HPS has electrified over 600 villages and impacted more than 200,000 people.<br>
+                - Sustainability: Biomass gasification uses agricultural waste, which is otherwise discarded, to produce clean electricity.<br>
+                - Economic Development: By providing a reliable energy source, HPS supports local businesses and entrepreneurship, creating new job opportunities.<br>
+                - Environmental Impact: The system reduces CO2 emissions by replacing diesel generators and kerosene lighting.
+            </p>
+            <p>
+                <strong>Challenges:</strong><br>
+                - Operational Scale: While biomass is abundant, scaling the technology to more villages requires significant investment and overcoming logistical issues.<br>
+                - Social Acceptance: Convincing rural communities to adopt new technologies and pay for electricity requires extensive awareness campaigns.
+            </p>
+            <p>
+                <strong>Key Takeaways:</strong> Husk Power Systems showcases the potential of decentralized, renewable energy solutions for rural India. By using locally available resources and creating a viable business model, HPS has provided a blueprint for micro power generation that can be replicated in other rural areas.
+            </p>
+        </div>
+        <div class="case-study">
+            <h3>Kenya: Solar Power in Rural Communities</h3>
+            <p>
+                <strong>Project:</strong> M-KOPA Solar <br>
+                <strong>Location:</strong> Rural Kenya <br>
+                <strong>Technology:</strong> Solar PV microgrids <br>
+                <strong>Objective:</strong> To provide affordable, decentralized power solutions to households without access to the national grid.
+            </p>
+            <p>
+                M-KOPA Solar is a leading company in Kenya providing solar-powered microgrids for rural communities with limited or no access to electricity. By leveraging a pay-as-you-go (PAYG) model, M-KOPA enables customers to acquire small solar home systems, which they can pay for over time using mobile payments. The system includes a solar panel, battery storage, and essential appliances like LED bulbs, phone chargers, and radios.
+            </p>
+            <p>
+                <strong>Impact:</strong><br>
+                - Electrification: Over 750,000 homes have been connected, benefiting 3 million people.<br>
+                - Affordability: The PAYG model is significantly cheaper than traditional energy sources like kerosene, making it accessible to low-income households.<br>
+                - Sustainability: This model reduces reliance on fossil fuels and supports Kenya’s energy transition to renewables.
+            </p>
+            <p>
+                <strong>Challenges:</strong><br>
+                - Limited financing options, system maintenance, and local technical capacity remain challenges, though progress is being made.
+            </p>
+            <p>
+                <strong>Key Takeaways:</strong> The M-KOPA model demonstrates how decentralized micro-power generation can be a sustainable and scalable solution for energy-poor regions in Africa. The use of mobile technology for payments enhances financial inclusion, and the solar systems help reduce household reliance on harmful and expensive energy sources.
+            </p>
+        </div>
+    </div>
+</section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="section">
